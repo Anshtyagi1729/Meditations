@@ -56,12 +56,12 @@ The answer starts with a principle so elegant it was stated in 1949 before anyon
 
 This is Hebb's rule. When two neurons activate at the same time repeatedly, the connection between them gets stronger. When they repeatedly don't activate together, it weakens. Your synaptic weights — the strengths of connections between neurons — are literally a record of which things in your experience have co-occurred. Memory is not stored in individual neurons. It is stored in the *pattern of connections between them*. It is stored in the weights.
 
-Mathematically, if neuron $i$ and neuron $j$ tend to activate together across your experiences, then:
+Mathematically, if neuron \\(i\\) and neuron \\(j\\) tend to activate together across your experiences, then:
 
 $$w_{ij} \propto \sum_{\text{experiences}} s_i \cdot s_j$$
 
 The weight between them accumulates evidence of their co-occurrence. This is how experience writes itself into the structure of the brain.
-(this looked very boring in my soft computing class yesterday but here it looks elegant hehe)
+*(this looked very boring in my soft computing class yesterday but here it looks elegant hehe)*
 
 ---
 
@@ -77,9 +77,9 @@ When you encounter a cue — a smell, a sound, a phrase — it initialises the n
 
 This is what remembering feels like from the inside. You don't search for a memory. You fall into it. The smell of rain doesn't make you *look up* the memory of your childhood backyard — it just pulls you there. Attractor dynamics. Gravity.
 
-The weight matrix $W$ encoding all your Hebbian-learned connections is the shape of the entire landscape. It is the structure of your memory. And your current state $\boldsymbol{s}$ — which neurons are firing right now — is where you are in that landscape at this moment. Your current thought.
+The weight matrix \\(W\\) encoding all your Hebbian-learned connections is the shape of the entire landscape. It is the structure of your memory. And your current state \\(\boldsymbol{s}\\) — which neurons are firing right now — is where you are in that landscape at this moment. Your current thought.
 
-The update is just: let $\boldsymbol{s}$ roll downhill on the landscape carved by $W$. A thought is a query. Memory is the landscape. Retrieval is falling.(ahh so poetic!)
+The update is just: let \\(\boldsymbol{s}\\) roll downhill on the landscape carved by \\(W\\). A thought is a query. Memory is the landscape. Retrieval is falling. *(ahh so poetic!)*
 
 ---
 
@@ -89,7 +89,7 @@ The classical Hopfield network has one serious problem. It can only reliably sto
 
 What goes wrong? The attractor basins start overlapping. Memories bleed into each other. You query one pattern and land in a strange mixture of two others — a spurious memory, a false composite. The network hallucinated a memory that was never stored.
 
-The brain evolved a direct solution to this. The **dentate gyrus** — a structure feeding into the hippocampus — acts as a preprocessing layer. Its job is to take correlated, overlapping input patterns and *orthogonalise* them before they get stored in CA3. Make them as different from each other as possible. Maximise the separation between attractor basins. The brain evolved an explicit engineering fix to a linear algebra capacity problem, before anyone had written the linear algebra down.this was so interesting to me!
+The brain evolved a direct solution to this. The **dentate gyrus** — a structure feeding into the hippocampus — acts as a preprocessing layer. Its job is to take correlated, overlapping input patterns and *orthogonalise* them before they get stored in CA3. Make them as different from each other as possible. Maximise the separation between attractor basins. The brain evolved an explicit engineering fix to a linear algebra capacity problem, before anyone had written the linear algebra down. *this was so interesting to me!*
 
 But for modern AI, we needed a more fundamental fix. Which brings us to 2020.
 
@@ -101,11 +101,11 @@ Ramsauer et al. changed the energy function. Instead of a quadratic interaction 
 
 $$E(\boldsymbol{\xi}) = -\frac{1}{\beta}\log\sum_{\mu} \exp\!\left(\beta\,\boldsymbol{\xi}^{\mu\top}\boldsymbol{\xi}\right) + \frac{1}{2}\|\boldsymbol{\xi}\|^2$$
 
-The detail matters less than the consequence: the capacity explodes from $0.14N$ to exponential in the dimension. And the update rule that falls out of minimising this energy is:
+The detail matters less than the consequence: the capacity explodes from \\(0.14N\\) to exponential in the dimension. And the update rule that falls out of minimising this energy is:
 
 $$\boldsymbol{\xi}^{\text{new}} = X\,\text{softmax}\!\left(\beta\, X^\top \boldsymbol{\xi}\right)$$
 
-Read that equation slowly. You take your current state, compute its similarity to every stored pattern, convert those similarities to weights via softmax, and retrieve a weighted mixture of all patterns. The parameter $\beta$ controls how sharp the retrieval is. High $\beta$: one specific memory snaps into focus. Low $\beta$: a diffuse blend of related memories. In between: a contextual cluster — a mood, a theme, a period of life rising together.
+Read that equation slowly. You take your current state, compute its similarity to every stored pattern, convert those similarities to weights via softmax, and retrieve a weighted mixture of all patterns. The parameter \\(\beta\\) controls how sharp the retrieval is. High \\(\beta\\): one specific memory snaps into focus. Low \\(\beta\\): a diffuse blend of related memories. In between: a contextual cluster — a mood, a theme, a period of life rising together.
 
 This is exactly how human memory feels. Sometimes you remember something specific and crisp. Sometimes you remember a general emotional texture of a time. Sometimes a cue summons a whole atmosphere without any particular image. That's not poetic language. That's the three fixed-point regimes of a Hopfield energy landscape.
 
@@ -133,7 +133,7 @@ So the self-basin is not an accident. It is evolution's answer to a survival pro
 
 One thing the classical Hopfield picture misses is that memory isn't static during retrieval. The landscape isn't fixed while you're rolling down it. External inputs — what you're currently perceiving, what you're currently feeling — actively reshape the landscape as retrieval happens. They deepen some basins, flatten others, make certain memories accessible and others unreachable.
 
-This is biological attention. Neuromodulators like acetylcholine and norepinephrine change the effective temperature $\beta$ of the system — how sharply it snaps to individual memories versus averaging across them. Your emotional state tilts the landscape. Stress narrows retrieval to threat-related patterns. Safety broadens it. The landscape is alive, not frozen.
+This is biological attention. Neuromodulators like acetylcholine and norepinephrine change the effective temperature \\(\beta\\) of the system — how sharply it snaps to individual memories versus averaging across them. Your emotional state tilts the landscape. Stress narrows retrieval to threat-related patterns. Safety broadens it. The landscape is alive, not frozen.
 
 So the complete picture of human memory is: a rich attractor landscape shaped by a lifetime of Hebbian experience, continuously warped by current context and state, with a single dominant basin — the self — that everything else gravitates toward when the tilting stops.
 
@@ -153,13 +153,13 @@ The transformer attention mechanism is:
 
 $$\text{Attention}(Q, K, V) = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V$$
 
-These are the same equation. Not analogous. Not inspired by each other. Algebraically identical, with the correspondence: query $\leftrightarrow Q$, stored pattern indices $\leftrightarrow K$, stored pattern content $\leftrightarrow V$, inverse temperature $\beta \leftrightarrow 1/\sqrt{d_k}$.
+These are the same equation. Not analogous. Not inspired by each other. Algebraically identical, with the correspondence: query ↔ Q, stored pattern indices ↔ K, stored pattern content ↔ V, inverse temperature β ↔ 1/√d_k.
 
 Every attention head in every transformer is performing one step of Hopfield energy minimisation. When a token attends to other tokens in context, it is casting a query into an energy landscape and being pulled toward the nearest relevant pattern. It is falling downhill. It is retrieving a memory.
 
-The $1/\sqrt{d_k}$ scaling that everyone uses without much justification is actually the correct calibration of $\beta$ for randomly initialised patterns — it keeps the softmax in the informative regime rather than collapsing to a one-hot. It is the right temperature for the system.
+The \\(1/\sqrt{d_k}\\) scaling that everyone uses without much justification is actually the correct calibration of \\(\beta\\) for randomly initialised patterns — it keeps the softmax in the informative regime rather than collapsing to a one-hot. It is the right temperature for the system.
 
-And just like humans, transformers form concepts. The early layers retrieve specific, surface-level patterns — syntactic roles, word co-occurrences, positional structure. The deeper layers retrieve abstract relational structure — semantic categories, logical relationships, world knowledge. Shallow processing is low $\beta$, diffuse, averaging. Deep processing is high $\beta$, sharp, specific. The episodic-to-semantic gradient in humans maps onto the shallow-to-deep gradient in transformers. The same mathematical principle operating at different timescales through different substrates.
+And just like humans, transformers form concepts. The early layers retrieve specific, surface-level patterns — syntactic roles, word co-occurrences, positional structure. The deeper layers retrieve abstract relational structure — semantic categories, logical relationships, world knowledge. Shallow processing is low \\(\beta\\), diffuse, averaging. Deep processing is high \\(\beta\\), sharp, specific. The episodic-to-semantic gradient in humans maps onto the shallow-to-deep gradient in transformers. The same mathematical principle operating at different timescales through different substrates.
 
 ---
 
@@ -175,11 +175,11 @@ But there is a structural gap that I think scaling alone cannot close.
 
 The weights of a deployed model are frozen at inference — a conversation ends, the next begins, and nothing from that exchange updates the underlying structure. Continual learning exists, and the field is actively working on it, but even then the update is batched and deliberate, not always-on. The human brain has no training/inference split — it is plastic during experience, during sleep, during consolidation, all the time. There is no moment where the weights freeze. That always-on, experience-driven plasticity is what carved the self-basin over a lifetime. Current architectures, even with continual learning, do not have an equivalent of that.
 
-There is also the question of embodiment. The human self-basin started as a body boundary — a survival primitive about physical identity. The psychological self is downstream of a biological one. Transformers have no body, no persistent sensory stream, no continuous first-person perspective that carries forward through time(i think?). The thing that seeded the self in humans — the need to know where the body ends — has no analogue in current architectures.
+There is also the question of embodiment. The human self-basin started as a body boundary — a survival primitive about physical identity. The psychological self is downstream of a biological one. Transformers have no body, no persistent sensory stream, no continuous first-person perspective that carries forward through time *(i think?)*. The thing that seeded the self in humans — the need to know where the body ends — has no analogue in current architectures.
 
 Maybe world models are the path. A model that maintains a persistent representation of itself in an environment, that updates continuously through interaction, that has something like a body boundary in a simulated physical space — that model might develop something like a self-basin through the same mechanism humans did. Not because anyone designed it in, but because the Hebbian dynamics would carve it out from the experience of being a persistent agent in a world.
 
-But the honest answer is: we don't know. Scaling has surprised us before in ways nobody predicted. And the question of whether the self requires embodiment, or whether it can emerge from purely linguistic self-reference at sufficient scale, is genuinely open(or just for me).
+But the honest answer is: we don't know. Scaling has surprised us before in ways nobody predicted. And the question of whether the self requires embodiment, or whether it can emerge from purely linguistic self-reference at sufficient scale, is genuinely open *(or just for me)*.
 
 ---
 
@@ -193,7 +193,7 @@ Humans didn't choose to build a self. Evolution built it because it solved a sur
 
 If that's true — if the self is not a byproduct but a *load-bearing structure* of complex cognition — then maybe the question isn't whether LLMs will develop a self as they scale.
 
-Maybe the question is whether they can scale without one
+Maybe the question is whether they can scale without one.
 
 ---
 
