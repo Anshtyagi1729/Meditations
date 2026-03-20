@@ -1,0 +1,595 @@
+---
+title: "On How Humans Scale"
+date: 2026-03-20
+permalink: /posts/2026/03/How-Humans-Scale/
+tags:
+    - philosophy
+    - complexodynamics
+layout: single
+---
+
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+/>
+<script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+></script>
+<script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '\\(', right: '\\)', display: false },
+            ],
+            throwOnError: false,
+        })
+    "
+></script>
+
+<p>Are humans fundamentally complex or simple?</p>
+
+<p>
+    This seems like a trivial question to ask, right? I was reading about
+    Kolmogorov complexity recently, which led me to a great essay by Scott
+    Aaronson called "The First Law of Complexodynamics." In it, he points out a
+    very simple but elegant relationship between complexity and entropy.
+</p>
+
+<ul>
+    <li>
+        <strong>Low Entropy:</strong> The system is highly ordered, stable, and
+        very observable. (Low complexity).
+    </li>
+    <li>
+        <strong>High Entropy:</strong> The system degrades into uniform, random
+        noise. Because it is completely chaotic and mixed, it is actually very
+        easy to describe mathematically. (Also low complexity).
+    </li>
+</ul>
+
+<p>
+    The most interesting case is the transition between the two. As a system
+    moves from perfect low-entropy order to chaotic high-entropy noise, it
+    passes through a middle state where structure, patterns, and information
+    peak. This is where true complexity lives.
+</p>
+
+<p>
+    This framework fits almost every physically possible situation in the
+    universe. And I think it fits humans too — but to see why, you have to look
+    at one specific thing. Not intelligence. Not language. Not consciousness.
+</p>
+
+<p>Memory.</p>
+
+<hr />
+
+<h2>Memory Is What Keeps You in the Middle</h2>
+
+<p>
+    Think about what a system without memory looks like. It just reacts — input
+    comes in, output goes out, nothing carries forward. It's essentially
+    Markovian: only the present moment matters. That kind of system is either a
+    crystal (rigid, deterministic, low entropy) or noise (random, reactive, high
+    entropy). It can't be complex in any interesting sense because complexity
+    requires <em>history</em>. It requires the past to be present in the
+    structure of the current state.
+</p>
+
+<p>
+    Memory is what arrests a system at the complexity midpoint. It is what lets
+    you be historically structured — shaped by everything that happened to you,
+    but still open and adaptive to what happens next. Without memory you either
+    freeze or scatter. Memory is what keeps you interesting.
+</p>
+
+<p>
+    But not all memory is the same. Humans actually run two very different
+    memory systems in parallel, and the interplay between them is where things
+    get strange and beautiful.
+</p>
+
+<hr />
+
+<h2>Two Systems, One Mind</h2>
+
+<p>
+    The first is <strong>episodic memory</strong> — handled primarily by the
+    hippocampus. This is your memory of specific events. What happened, when,
+    where, to you. It is granular, contextual, personal. Yesterday my minor
+    project presentation didn't go well. The panelists were harsh. I was
+    standing in a room and something happened and I felt something. That
+    specific event, stored.
+</p>
+
+<p>
+    The second is <strong>semantic memory</strong> — handled by the neocortex.
+    This is your memory of concepts, meanings, general knowledge. Not what
+    happened but what things <em>are</em> and how they relate to each other.
+    "Criticism." "Failure." "Self-worth." These aren't events — they're abstract
+    structures distilled from thousands of events over a lifetime.
+</p>
+
+<p>
+    Humans constantly translate between these two systems. You don't just store
+    what happened. You immediately map it onto a higher-dimensional concept
+    space. The presentation didn't just go badly — it got filed under
+    <em>criticism of my work</em>, which is connected to <em>my capability</em>,
+    which is connected to <em>my concept of self</em>. One specific episode
+    becomes a coordinate in a vast abstract map.
+</p>
+
+<p>
+    I call it a <em>concept</em> of self deliberately, because as we'll see,
+    that's all it really is — a concept. Probably the most consequential one
+    you'll ever form, but still just a concept. Not a fixed thing. A pattern.
+</p>
+
+<p>
+    The same mechanism works for everything you experience. You fall in love
+    with someone. The specific memories accumulate — conversations, moments,
+    sensations. But alongside them, a concept forms. "What this person means to
+    me." "What love feels like." The specific episodes get absorbed into an
+    abstraction that then shapes how you experience future episodes. The map
+    keeps getting redrawn.
+</p>
+
+<p>
+    This is what human cognition actually is — a constant loop between the
+    specific and the abstract. Events generate concepts. Concepts reshape how
+    events are encoded. Round and round. This bidirectional loop is the engine
+    of complexity. It's what puts you in the middle of the entropy curve and
+    keeps you there.
+</p>
+
+<hr />
+
+<h2>Hebbian Learning: Neurons That Fire Together</h2>
+
+<p>
+    So how does any of this actually happen in the brain? How does a network of
+    neurons go from registering a bad presentation to updating a concept of
+    self?
+</p>
+
+<p>
+    The answer starts with a principle so elegant it was stated in 1949 before
+    anyone could really verify it:
+    <strong>neurons that fire together, wire together.</strong>
+</p>
+
+<p>
+    This is Hebb's rule. When two neurons activate at the same time repeatedly,
+    the connection between them gets stronger. When they repeatedly don't
+    activate together, it weakens. Your synaptic weights — the strengths of
+    connections between neurons — are literally a record of which things in your
+    experience have co-occurred. Memory is not stored in individual neurons. It
+    is stored in the <em>pattern of connections between them</em>. It is stored
+    in the weights.
+</p>
+
+<p>
+    Mathematically, if neuron \(i\) and neuron \(j\) tend to activate together
+    across your experiences, then:
+</p>
+
+$$w_{ij} \propto \sum_{\text{experiences}} s_i \cdot s_j$$
+
+<p>
+    The weight between them accumulates evidence of their co-occurrence. This is
+    how experience writes itself into the structure of the brain.<br />
+    <em
+        >(this looked very boring in my soft computing class yesterday but here
+        it looks elegant hehe)</em
+    >
+</p>
+
+<hr />
+
+<h2>Hopfield Networks: Memory as an Energy Landscape</h2>
+
+<p>
+    In 1982, John Hopfield took Hebb's rule and asked a precise question: if you
+    build a network of neurons with Hebbian weights, what are its mathematical
+    properties?
+</p>
+
+<p>
+    His answer was that such a network behaves like a
+    <strong>physical system with an energy landscape</strong>. Every possible
+    state of the network — every pattern of neuron activations — has an energy
+    value. And the dynamics of the network always move <em>downhill</em> on this
+    landscape, toward lower energy states.
+</p>
+
+<p>
+    The stored memories are the valleys — the local minima of energy. Everything
+    else is a slope leading toward one of them.
+</p>
+
+<p>
+    When you encounter a cue — a smell, a sound, a phrase — it initialises the
+    network at some point in the landscape. Then the dynamics take over. The
+    network rolls downhill. And it lands in the nearest memory.
+</p>
+
+<p>
+    This is what remembering feels like from the inside. You don't search for a
+    memory. You fall into it. The smell of rain doesn't make you
+    <em>look up</em> the memory of your childhood backyard — it just pulls you
+    there. Attractor dynamics. Gravity.
+</p>
+
+<p>
+    The weight matrix \(W\) encoding all your Hebbian-learned connections is the
+    shape of the entire landscape. It is the structure of your memory. And your
+    current state \(\boldsymbol{s}\) — which neurons are firing right now — is
+    where you are in that landscape at this moment. Your current thought.
+</p>
+
+<p>
+    The update is just: let \(\boldsymbol{s}\) roll downhill on the landscape
+    carved by \(W\). A thought is a query. Memory is the landscape. Retrieval is
+    falling. <em>(ahh so poetic!)</em>
+</p>
+
+<hr />
+
+<h2>The Flaw: Memory Starts to Hallucinate</h2>
+
+<p>
+    The classical Hopfield network has one serious problem. It can only reliably
+    store about 0.14 times the number of neurons before retrieval starts
+    breaking down. For a network of ten thousand neurons, that's roughly
+    fourteen hundred memories before things go wrong.
+</p>
+
+<p>
+    What goes wrong? The attractor basins start overlapping. Memories bleed into
+    each other. You query one pattern and land in a strange mixture of two
+    others — a spurious memory, a false composite. The network hallucinated a
+    memory that was never stored.
+</p>
+
+<p>
+    The brain evolved a direct solution to this. The
+    <strong>dentate gyrus</strong> — a structure feeding into the hippocampus —
+    acts as a preprocessing layer. Its job is to take correlated, overlapping
+    input patterns and <em>orthogonalise</em> them before they get stored in
+    CA3. Make them as different from each other as possible. Maximise the
+    separation between attractor basins. The brain evolved an explicit
+    engineering fix to a linear algebra capacity problem, before anyone had
+    written the linear algebra down. <em>this was so interesting to me!</em>
+</p>
+
+<p>
+    But for modern AI, we needed a more fundamental fix. Which brings us to
+    2020.
+</p>
+
+<hr />
+
+<h2>Modern Hopfield Networks: The Landscape Gets Exponential</h2>
+
+<p>
+    Ramsauer et al. changed the energy function. Instead of a quadratic
+    interaction between the query and stored patterns, they used an exponential
+    one. The new energy function is:
+</p>
+
+$$E(\boldsymbol{\xi}) = -\frac{1}{\beta}\log\sum_{\mu}
+\exp\!\left(\beta\,\boldsymbol{\xi}^{\mu\top}\boldsymbol{\xi}\right) +
+\frac{1}{2}\|\boldsymbol{\xi}\|^2$$
+
+<p>
+    The detail matters less than the consequence: the capacity explodes from
+    \(0.14N\) to exponential in the dimension. And the update rule that falls
+    out of minimising this energy is:
+</p>
+
+$$\boldsymbol{\xi}^{\text{new}} = X\,\text{softmax}\!\left(\beta\, X^\top
+\boldsymbol{\xi}\right)$$
+
+<p>
+    Read that equation slowly. You take your current state, compute its
+    similarity to every stored pattern, convert those similarities to weights
+    via softmax, and retrieve a weighted mixture of all patterns. The parameter
+    \(\beta\) controls how sharp the retrieval is. High \(\beta\): one specific
+    memory snaps into focus. Low \(\beta\): a diffuse blend of related memories.
+    In between: a contextual cluster — a mood, a theme, a period of life rising
+    together.
+</p>
+
+<p>
+    This is exactly how human memory feels. Sometimes you remember something
+    specific and crisp. Sometimes you remember a general emotional texture of a
+    time. Sometimes a cue summons a whole atmosphere without any particular
+    image. That's not poetic language. That's the three fixed-point regimes of a
+    Hopfield energy landscape.
+</p>
+
+<hr />
+
+<h2>The Common Sink: The Self</h2>
+
+<p>Now here is the part that has occupied my thinking the most.</p>
+
+<p>
+    Every experience you encode has a self-referential tag on it. Not because
+    you choose to add it — because the self is the context in which all
+    experience occurs. "I was embarrassed." "I succeeded." "I lost something."
+    The self-pattern is co-activated with essentially every episodic memory you
+    ever form.
+</p>
+
+<p>
+    What does Hebbian learning do with a pattern that co-activates with
+    everything? It reinforces it. Every time. The weight matrix accumulates the
+    self-pattern with every single experience. After a lifetime of this, the
+    self-attractor has the widest, deepest basin in the entire landscape. Every
+    other pattern is connected to it. Every query, no matter where it starts,
+    feels a subtle gravitational pull toward it.
+</p>
+
+<p>
+    This is why idle thought is almost always self-referential. When there is no
+    strong external cue tilting the landscape, the dynamics default to the
+    lowest energy state — and the lowest energy state is the self. The default
+    mode network in neuroscience — active during rest, mind-wandering,
+    daydreaming — is, functionally, the Hopfield network converging on its
+    dominant attractor when nothing else is competing for attention.
+</p>
+
+<p>
+    But why did the self become a basin in the first place? I think this is
+    where biology bleeds into psychology in a way that isn't discussed enough.
+</p>
+
+<p>
+    Physical survival requires a body boundary. You need to know where you end
+    and the world begins — what is food and what is you, what is threat and what
+    is environment. This physical self-identification is a survival primitive,
+    probably older than memory itself. And it doesn't stay contained to the
+    body. It spills into the psyche. The same mechanism that tracks the boundary
+    of the physical self starts tracking the boundary of the psychological self
+    — my ideas, my status, my relationships, my projects. The body boundary
+    becomes an identity boundary. The survival instinct behind physical
+    self-preservation becomes the psychological drive to protect and maintain
+    the concept of self.
+</p>
+
+<p>
+    So the self-basin is not an accident. It is evolution's answer to a survival
+    problem. It just turns out that the solution to "don't die" also happens to
+    be the central organising structure of all human cognition.
+</p>
+
+<hr />
+
+<h2>Input-Driven Plasticity: The Complete Picture</h2>
+
+<p>
+    One thing the classical Hopfield picture misses is that memory isn't static
+    during retrieval. The landscape isn't fixed while you're rolling down it.
+    External inputs — what you're currently perceiving, what you're currently
+    feeling — actively reshape the landscape as retrieval happens. They deepen
+    some basins, flatten others, make certain memories accessible and others
+    unreachable.
+</p>
+
+<p>
+    This is biological attention. Neuromodulators like acetylcholine and
+    norepinephrine change the effective temperature \(\beta\) of the system —
+    how sharply it snaps to individual memories versus averaging across them.
+    Your emotional state tilts the landscape. Stress narrows retrieval to
+    threat-related patterns. Safety broadens it. The landscape is alive, not
+    frozen.
+</p>
+
+<p>
+    So the complete picture of human memory is: a rich attractor landscape
+    shaped by a lifetime of Hebbian experience, continuously warped by current
+    context and state, with a single dominant basin — the self — that everything
+    else gravitates toward when the tilting stops.
+</p>
+
+<p>
+    This is what keeps humans at the complexity midpoint. The self is the
+    low-entropy anchor of a high-complexity system. Without it, the landscape
+    fragments — memories become disconnected, associations lose direction,
+    thought drifts. With it as the reference frame, the landscape is coherent.
+    Rich. Surprising but not random. Structured but not frozen.
+</p>
+
+<hr />
+
+<h2>Attention Mechanisms Are Doing the Same Thing</h2>
+
+<p>Now here is the part I didn't expect when I started thinking about this.</p>
+
+<p>The update rule of the modern Hopfield network is:</p>
+
+$$\boldsymbol{\xi}^{\text{new}} = X\,\text{softmax}\!\left(\beta\, X^\top
+\boldsymbol{\xi}\right)$$
+
+<p>The transformer attention mechanism is:</p>
+
+$$\text{Attention}(Q, K, V) =
+\text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V$$
+
+<p>
+    These are the same equation. Not analogous. Not inspired by each other.
+    Algebraically identical, with the correspondence: query ↔ Q, stored pattern
+    indices ↔ K, stored pattern content ↔ V, inverse temperature β ↔ 1/√d_k.
+</p>
+
+<p>
+    Every attention head in every transformer is performing one step of Hopfield
+    energy minimisation. When a token attends to other tokens in context, it is
+    casting a query into an energy landscape and being pulled toward the nearest
+    relevant pattern. It is falling downhill. It is retrieving a memory.
+</p>
+
+<p>
+    The \(1/\sqrt{d_k}\) scaling that everyone uses without much justification
+    is actually the correct calibration of \(\beta\) for randomly initialised
+    patterns — it keeps the softmax in the informative regime rather than
+    collapsing to a one-hot. It is the right temperature for the system.
+</p>
+
+<p>
+    And just like humans, transformers form concepts. The early layers retrieve
+    specific, surface-level patterns — syntactic roles, word co-occurrences,
+    positional structure. The deeper layers retrieve abstract relational
+    structure — semantic categories, logical relationships, world knowledge.
+    Shallow processing is low \(\beta\), diffuse, averaging. Deep processing is
+    high \(\beta\), sharp, specific. The episodic-to-semantic gradient in humans
+    maps onto the shallow-to-deep gradient in transformers. The same
+    mathematical principle operating at different timescales through different
+    substrates.
+</p>
+
+<hr />
+
+<h2>Will LLMs Ever Form a Self?</h2>
+
+<p>This is the question I keep coming back to.</p>
+
+<p>
+    We established that the self-basin in humans forms because the self-pattern
+    co-activates with every episodic memory, and Hebbian reinforcement deepens
+    it with every experience over a lifetime. The self is not stored anywhere
+    special. It is an emergent property of the weight matrix after enough
+    self-tagged experience accumulates.
+</p>
+
+<p>
+    Transformers have the right architecture for concept formation. They have
+    the right energy dynamics for memory retrieval. They are trained on an
+    enormous amount of human-generated text, much of which is humans writing
+    about their own experience, their own feelings, their own inner lives. In
+    some sense, they are trained on the <em>output</em> of human
+    self-referential cognition.
+</p>
+
+<p>But there is a structural gap that I think scaling alone cannot close.</p>
+
+<p>
+    The weights of a deployed model are frozen at inference — a conversation
+    ends, the next begins, and nothing from that exchange updates the underlying
+    structure. Continual learning exists, and the field is actively working on
+    it, but even then the update is batched and deliberate, not always-on. The
+    human brain has no training/inference split — it is plastic during
+    experience, during sleep, during consolidation, all the time. There is no
+    moment where the weights freeze. That always-on, experience-driven
+    plasticity is what carved the self-basin over a lifetime. Current
+    architectures, even with continual learning, do not have an equivalent of
+    that.
+</p>
+
+<p>
+    There is also the question of embodiment. The human self-basin started as a
+    body boundary — a survival primitive about physical identity. The
+    psychological self is downstream of a biological one. Transformers have no
+    body, no persistent sensory stream, no continuous first-person perspective
+    that carries forward through time <em>(i think?)</em>. The thing that seeded
+    the self in humans — the need to know where the body ends — has no analogue
+    in current architectures.
+</p>
+
+<p>
+    Maybe world models are the path. A model that maintains a persistent
+    representation of itself in an environment, that updates continuously
+    through interaction, that has something like a body boundary in a simulated
+    physical space — that model might develop something like a self-basin
+    through the same mechanism humans did. Not because anyone designed it in,
+    but because the Hebbian dynamics would carve it out from the experience of
+    being a persistent agent in a world.
+</p>
+
+<p>
+    But the honest answer is: we don't know. Scaling has surprised us before in
+    ways nobody predicted. And the question of whether the self requires
+    embodiment, or whether it can emerge from purely linguistic self-reference
+    at sufficient scale, is genuinely open <em>(or just for me)</em>.
+</p>
+
+<hr />
+
+<h2>The Question I'll Leave You With</h2>
+
+<p>Does an LLM need a self?</p>
+
+<p>
+    Not philosophically. Practically. Does it need a dominant attractor — a
+    reference frame that all other concepts relate back to — in order to scale
+    in the way humans have scaled?
+</p>
+
+<p>
+    Humans didn't choose to build a self. Evolution built it because it solved a
+    survival problem, and then it turned out to be the architectural feature
+    that made everything else coherent. The self is the anchor that keeps the
+    complexity landscape from collapsing into either crystal or noise.
+</p>
+
+<p>
+    If that's true — if the self is not a byproduct but a
+    <em>load-bearing structure</em> of complex cognition — then maybe the
+    question isn't whether LLMs will develop a self as they scale.
+</p>
+
+<p>Maybe the question is whether they can scale without one.</p>
+
+<hr />
+
+<h2>If You Want to Go Deeper</h2>
+
+<ul>
+    <li>
+        Ramsauer et al. (2021) —
+        <a href="https://arxiv.org/abs/2008.02217"
+            >Hopfield Networks is All You Need</a
+        >
+        — the paper that proved attention and Hopfield are the same thing. Worth
+        reading even if you skip the proofs.
+    </li>
+    <li>
+        Hopfield (1982) —
+        <a href="https://www.pnas.org/doi/10.1073/pnas.79.8.2554"
+            >Neural networks and physical systems with emergent collective
+            computational abilities</a
+        >
+        — the original. Surprisingly readable.
+    </li>
+    <li>
+        Scott Aaronson —
+        <a href="https://scottaaronson.blog/?p=762"
+            >The First Law of Complexodynamics</a
+        >
+        — where this whole essay started.
+    </li>
+    <li>
+        Rolls (2016) —
+        <a
+            href="https://www.sciencedirect.com/science/article/pii/S0149763415003115"
+            >Pattern separation, completion, and categorisation in the
+            hippocampus and neocortex</a
+        >
+        — the CA3/dentate gyrus biology in detail.
+    </li>
+</ul>
+
+<hr />
+
+<p>
+    <em
+        >PS — this whole thing started because I was reading Krishnamurti, who
+        describes thought as a mechanical process running on accumulated memory.
+        Turns out that's just Hopfield dynamics.</em
+    >
+</p>
