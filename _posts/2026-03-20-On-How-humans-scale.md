@@ -77,7 +77,7 @@ When you encounter a cue — a smell, a sound, a phrase — it initialises the n
 
 This is what remembering feels like from the inside. You don't search for a memory. You fall into it. The smell of rain doesn't make you *look up* the memory of your childhood backyard — it just pulls you there. Attractor dynamics. Gravity.
 
-The weight matrix $W$ encoding all your Hebbian-learned connections is the shape of the entire landscape. It is the structure of your memory. And your current state $\bm{s}$ — which neurons are firing right now — is where you are in that landscape at this moment. Your current thought.
+The weight matrix $W$ encoding all your Hebbian-learned connections is the shape of the entire landscape. It is the structure of your memory. And your current state $\boldsymbol{s}$ — which neurons are firing right now — is where you are in that landscape at this moment. Your current thought.
 
 The update is just: let $\boldsymbol{s}$ roll downhill on the landscape carved by $W$. A thought is a query. Memory is the landscape. Retrieval is falling.(ahh so poetic!)
 
